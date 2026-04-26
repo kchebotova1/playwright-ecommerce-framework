@@ -1,0 +1,31 @@
+#VENV
+venv/
+.venv/
+env/
+
+#Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+
+#Pytest
+.pytest_cache/
+
+#PyCharm / IDE
+.idea/
+.vscode/
+
+#Results, reports and screenshots
+test-results/
+playwright-report/
+allure-results/
+allure-report/
+*.png
+*.zip
+*.webm
+
+#Local and sensitive settings
+.env
+.env.local
