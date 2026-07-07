@@ -1,5 +1,5 @@
 import pytest
-from .pages.header import Header
+from pages.header import Header
 from playwright.sync_api import Page, expect
 
 #Main Page Header display

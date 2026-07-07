@@ -1,10 +1,10 @@
 import pytest
-from PlaywrightProject.Get_products_names import get_all_product_names
+from Get_products_names import get_all_product_names
 from playwright.sync_api import Page, expect
 from pytest_base_url.plugin import base_url
 from pytest_playwright.pytest_playwright import new_context
-from .pages.sorting import Sorting
-from .pages.container import Container
+from pages.sorting import Sorting
+from pages.container import Container
 
 #Main Page Sorting Alphabet
 def test_mainpage_sort_alphabet(page: Page, new_context, base_url) -> None:
