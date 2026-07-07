@@ -1,4 +1,4 @@
-from playwright.sync_api import Page
+from playwright.sync_api import Page, expect
 
 class Header:
     def __init__(self, page: Page):
@@ -19,6 +19,16 @@ class Header:
         self.other_tools_link = page.locator("[data-test=\"nav-other\"]")
         self.special_tools_link = page.locator("[data-test=\"nav-special-tools\"]")
         self.rentals_tools_link = page.locator("[data-test=\"nav-rentals\"]")
+
+    #waiting for header to be loaded
+    def is_loaded(self) -> None:
+        expect(self.logo_link).to_be_visible(timeout=20)
+        expect(self.home_link).to_be_visible(timeout=20)
+        expect(self.categories_dropdown).to_be_visible(timeout=20)
+        expect(self.contact_link).to_be_visible(timeout=20)
+        expect(self.sign_in_link).to_be_visible(timeout=20)
+        expect(self.language_link).to_be_visible(timeout=20)
+        expect(self.cart_link).to_be_visible(timeout=20)
 
     #Clicking main headers links
     def click_logo(self) -> None:

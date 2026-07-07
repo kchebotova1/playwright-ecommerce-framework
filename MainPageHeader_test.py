@@ -8,14 +8,16 @@ def test_mainpage_header_display(page: Page) -> None:
     # open Main Page
     page.goto("https://practicesoftwaretesting.com/")
     # check logo displaying and click logo
-    expect(header.logo_link).to_be_visible()
+    header.is_loaded()
     header.click_logo()
     expect(page).to_have_url("https://practicesoftwaretesting.com/")
     # check Home link displaying and click Home
+    header.is_loaded()
     expect(header.home_link).to_be_visible()
     header.click_home()
     expect(page).to_have_url("https://practicesoftwaretesting.com/")
     # check all buttons in the header
+    header.is_loaded()
     expect(header.categories_dropdown).to_be_visible()
     expect(header.sign_in_link).to_be_visible()
     expect(header.language_link).to_be_visible()
